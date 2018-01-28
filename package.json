@@ -1,0 +1,12 @@
+{
+  "name": "aqs.rest",
+  "version": "1.0.0",
+  "description": "Rest API for Attendance System",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "mongoose": "^4.13.9",
+    "rest-hapi": "^0.40.0"
+  }
+}
