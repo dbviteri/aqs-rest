@@ -1,7 +1,7 @@
 'use strict';
 
 exports.constants = Object.freeze ({
-  PORT: 8125,
+  PORT: process.env.PORT || 3000,
   SERVER_TITLE: 'Attendance System REST Api'
 })
 
