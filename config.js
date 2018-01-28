@@ -8,7 +8,10 @@ exports.constants = Object.freeze ({
 exports.restHapiConfig = {
   appTitle: this.constants.SERVER_TITLE,
   mongo: {
-    URI: 'mongodb://localhost/att-rest'
+    // CHANGE THIS TO THE MONGODB URI
+    // For heroku, we need to pass process.env.MONGOLAB_URI
+    // For test, we can use 'mongodb://localhost/att-rest'
+    URI: process.env.MONGOLAB_URI
   },
   server: {
     connection: {
