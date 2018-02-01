@@ -34,7 +34,7 @@ module.exports = (mongoose) => {
           model: "attendance"
         },
         professor: {
-          type: "ONE_ONE",
+          type: "MANY_ONE",
           model: "professor"
         },
         students: {
