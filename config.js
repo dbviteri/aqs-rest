@@ -18,7 +18,8 @@ exports.restHapiConfig = {
       port: this.constants.PORT
     }
   },
-  enableAuditLog: false,
+  enableAuditLog: true,
+  auditLogTTL: "1d",
   enableCreatedAt:false,
   enableUpdatedAt:false,
   enableDeletedAt:false,
