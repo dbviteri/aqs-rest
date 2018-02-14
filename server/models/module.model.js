@@ -13,6 +13,10 @@ module.exports = (mongoose) => {
       required: true,
       unique: true
     },
+    course: {
+      type: Types.ObjectId,
+      required: true,
+    },
     professor: {
       type: Types.ObjectId,
       ref: "professor"
@@ -23,15 +27,19 @@ module.exports = (mongoose) => {
     collectionName: modelName,
     routeOptions: {
       associations: {
-        lectures: {
+        activities: {
           type: "ONE_MANY",
           foreignField: "module",
-          model: "lecture"
+          model: "activity"
         },
         attendances: {
           type: "ONE_MANY",
           foreignField: "attendance",
           model: "attendance"
+        },
+        course: {
+          type: "MANY_ONE",
+          model: "course"
         },
         professor: {
           type: "MANY_ONE",

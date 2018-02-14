@@ -1,9 +1,11 @@
 'use strict';
 
-exports.constants = Object.freeze ({
+exports.constants = {
   PORT: process.env.PORT || 3000,
-  SERVER_TITLE: 'Attendance System REST Api'
-})
+  SERVER_TITLE: 'Attendance System REST Api',
+  JWT_SECRET: process.env.JWT_SECRET || "TEST",
+  EXPIRATION_PERIOD: '3h'
+}
 
 exports.restHapiConfig = {
   appTitle: this.constants.SERVER_TITLE,
@@ -27,5 +29,7 @@ exports.restHapiConfig = {
   enableUpdatedBy:false,
   enableDeletedBy:false,
   absoluteModelPath: true,
-  modelPath: __dirname + '/server/models'
+  absoluteApiPath: true,
+  modelPath: __dirname + '/server/models',
+  apiPath: __dirname + '/server/api',
 }

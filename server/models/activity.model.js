@@ -1,12 +1,19 @@
 'use strict';
 
+// Lecture, workshop, seminar, etc
 module.exports = (mongoose) => {
-  const modelName = "lecture";
+  const modelName = "activity";
   const Types = mongoose.Schema.Types;
   const Schema = new mongoose.Schema({
     module: {
       type: Types.ObjectId,
       required: true
+    },
+    type: {
+      type: Types.String,
+      enum: ['LEC', 'SEM', 'LAB'],
+      default: 'LEC',
+      required: true,
     },
     start: {
       type: Types.Date,

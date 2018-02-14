@@ -32,11 +32,11 @@ module.exports = (mongoose) => {
           type: "MANY_MANY",
           model: "module"
         },
-        attendances: {
-          type: "ONE_MANY",
-          foreignField: "student",
-          model: "attendance"
-        }
+        // attendances: {
+        //   type: "ONE_MANY",
+        //   foreignField: "student",
+        //   model: "attendance"
+        // }
       }
     }
   };

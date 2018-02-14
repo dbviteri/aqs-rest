@@ -6,7 +6,9 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "jsonwebtoken": "^8.1.1",
     "mongoose": "^4.13.9",
-    "rest-hapi": "^0.40.0"
+    "rest-hapi": "^0.40.0",
+    "shortid": "^2.2.8"
   }
 }
